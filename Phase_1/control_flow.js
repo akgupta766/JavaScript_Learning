@@ -104,6 +104,15 @@ console.log("Sum of all element of 'num' array : ",sum);
     //.find() used to get the first match. returns the value
 const firstEven = nums.find((n) => n%2 === 0);
 console.log("The the even item in the array :", firstEven);
-
+    //.findIndex() used to get first match index 
 const firstEvenIdx = nums.findIndex((n) => n% 2 ==0);
 console.log("Index Of the first even item in the array :",firstEvenIdx);
+
+    // .some()
+nums.some((n) => n > 4); //true (at least one matches)
+    // .every()
+nums.every((n) => n > 2); //false (even if one doesn't match)
+
+// chaining 
+const result = nums.filter((n) => n % 2 === 0).map((n) => n * 10);
+console.log(result); //[20,40]
